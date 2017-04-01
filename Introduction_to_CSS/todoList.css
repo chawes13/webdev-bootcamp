@@ -1,0 +1,16 @@
+h1 {
+	color: black;
+}
+
+body {
+	background: rgba(200, 80, 40, .5);
+	color: green;
+}
+
+#special{
+	background: yellow;
+}
+
+.complete{
+	text-decoration: line-through;
+}
