@@ -1,0 +1,20 @@
+h1 {
+	color: #0000FF;
+/*	border-color: purple;
+	border-width: 5px;
+	border-style: double;*/
+	border: 5px double orange;
+}
+
+h4 {
+	color: rgba(0, 100, 0, .7);
+	background: rgb(255, 100, 90);
+}
+
+li {
+	color: orange;
+}
+
+body {
+	background: lightslategray;
+}

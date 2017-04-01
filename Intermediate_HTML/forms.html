@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Demo</title>
+</head>
+<body>
+
+<!-- Login -->
+<h1>Login</h1>
+<form>
+	<label>
+		Email:
+		<input name="username" type="email" placeholder="email@example.com" required>
+	</label>
+	<!-- Alternative label syntax -->
+	<label for="password">Password:</label>
+	<input id="password" name="password" type="password" placeholder="password" required>
+	<button>Submit</button>
+</form>
+
+<!-- Radio buttons -->
+<p>Do you prefer dogs or cats?</p>
+<form>
+	<label>
+		Dogs:
+		<input type="radio" name="petChoice" value="DOG">
+	</label>
+	<label>
+		Cats:
+		<input type="radio" name="petChoice" value="CAT">
+	</label>
+	<button>GO!</button>
+</form>
+
+<!-- Dropdowns -->
+<p>What is your favourite color?</p>
+<form>
+	<select name="colour">
+		<option value="blue">Blue steel</option>
+		<option value="grey">Grey poupon</option>
+		<option value="black">Black night</option>
+	</select>
+	<textarea placeholder="insert bio here" name="bio" rows="10" cols="25"></textarea>
+	<button>Submit</button>
+</form>
+</body>
+</html>
