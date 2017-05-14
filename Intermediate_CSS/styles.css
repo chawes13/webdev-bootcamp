@@ -1,0 +1,21 @@
+body {
+	font-size: 12px;
+}
+
+p {
+	font-family: Verdana;
+	line-height: 1.5;
+}
+
+h1 {
+	font-family: 'Spirax', cursive;
+	font-size: 5.0em;
+	text-align: center;
+	text-decoration: underline; 
+}
+
+span {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: line-through;
+}
