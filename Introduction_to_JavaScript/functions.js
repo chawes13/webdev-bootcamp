@@ -5,16 +5,13 @@ function isEven(num) {
 
 //Problem 2 - factorial(); Takes a single numeric input and return the factorial (0! is 1)
 function factorial(num) {
-	var factor = 1;
-	if(num === 0){
-		return factor;
-	}
-	else {
+	var result = 1;
+	if(num !== 0){
 		for(var i=num; i > 0; i--){
-			factor *= i;
+			result *= i;
 		}
-		return factor;
 	}
+	return result;
 }
 
 //Problem 3 - kebabToSnake(); Take kebab-cased and return snake_cased
