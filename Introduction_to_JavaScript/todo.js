@@ -8,11 +8,13 @@ while(run){
 
 	switch(action){
 		case "new":
-			var newItem = prompt("Please input your todo");
-			todoList.push(newItem);
+			addItem();
 			break;
 		case "list":
-			console.log(todoList.toString());
+			printTodoList();
+			break;
+		case "delete":
+			deleteItem();
 			break;
 		case "quit":
 			run = false;
@@ -20,4 +22,26 @@ while(run){
 		default:
 			alert("Sorry that action isn't supported!");
 	}
+}
+
+function printTodoList(){
+	console.log("**********");
+	todoList.forEach(function(item, index){
+		console.log(index + ": " + item);
+	});
+	console.log("**********");
+}
+
+//Refactoring code for readability
+function addItem(){
+	var newItem = prompt("Please input your todo");
+	todoList.push(newItem);
+	console.log("'" + newItem + "' added to the list");
+}
+
+function deleteItem(){
+	printTodoList();
+	var indexToDelete = prompt("Which todo would you like to delete?");
+	var deletedItem = todoList.splice(indexToDelete, 1);
+	console.log("'"+ deletedItem + "' successfully deleted");
 }
