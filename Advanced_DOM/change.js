@@ -1,7 +1,5 @@
 var button = document.querySelector("button");
-var body = document.querySelector("body");
-button.addEventListener("click", changeBackground);
-
-function changeBackground(){
-	body.classList.toggle("purple-bg");
-}
+//Do NOT have to select the body, it is accessible directly from the document object
+button.addEventListener("click", function(){
+	document.body.classList.toggle("purple-bg");
+});
