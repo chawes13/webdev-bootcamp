@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colour Game</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="colourGame.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+</head>
+<body>
+<div class="jumbotron">
+<h1>The Great <div id="rgbTitle">RGB</div> Gussing Game</h1>
+</div>
+
+<nav class="navbar navbar-default">
+	<div class="container">	
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <!-- These visually represent the hamburger -->
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+      </button>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+			<ul class="nav navbar-nav">
+				<li id="reset"><a href="#">New Colours</a></li>		
+			</ul>
+			<p class="navbar-text" id="result"></p>
+			<ul class="nav navbar-nav navbar-right" id="mode">
+				<li><a href="#">Easy</a></li>
+				<li class="active"><a href="#">Hard</a></li>			
+			</ul>
+		</div>	
+	</div>
+</nav>
+
+<div id="squares">
+<div id="easy">
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+</div>
+<div id="hard">
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="colourGame.js"></script>
+</body>
+</html>

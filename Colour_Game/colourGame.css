@@ -1,0 +1,64 @@
+body {
+	background-color: #232323;
+	text-transform: uppercase;
+	font-family: 'Ubuntu';
+}
+
+.square {
+	width: 30%;
+	background: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 15%;
+}
+
+#squares {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.jumbotron h1 {
+	/*color: white;*/
+	text-align: center;
+	font-size: 25px;
+}
+
+#result {
+	margin: 0 auto;
+	padding-top: auto;
+	padding-bottom: auto;
+	text-align:center;
+}
+
+.jumbotron {
+	padding-bottom: 10px;
+	padding-top: 5px;
+	margin-bottom: 0px;
+	background-color: #4b78c1;
+	color: white;
+	/*text-transform: uppercase;*/
+}
+
+.navbar-default {
+	border: none;
+	min-height:30px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: #4b78c1;
+	color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #4b78c1;
+	font-weight: 700;
+}
+
+#rgbTitle {
+	font-size: 2em;
+}
+
+/*.active {
+	color: pink;
+}*/
