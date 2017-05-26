@@ -40,18 +40,7 @@ function selectAnswer(){
 function setupSquares(){
 	for(var i=0; i < squares.length; i++){
 		squares[i].style.backgroundColor = colours[i];
-		squares[i].addEventListener("click", function(){
-			if(this.style.backgroundColor === answer){
-				result.innerHTML = "You won!";
-				reset.innerHTML = "Play Again";
-				for(var i=0; i < squares.length; i++){
-					squares[i].style.backgroundColor = answer;
-				}
-			} else {
-				this.style.backgroundColor = "#232323";
-				result.innerHTML = "Try Again!";
-			}
-		});
+		squares[i].addEventListener("click", squareAction);
 	}
 }
 
@@ -62,7 +51,22 @@ function randomNum(max){
 function playAgain(){
 	colours = [];
 	reset.innerHTML = "New Colours";
+	result.innerHTML = "";
 	createGameboard();
+}
+
+function squareAction(){
+	if(this.style.backgroundColor === answer){
+		result.innerHTML = "You won!";
+		reset.innerHTML = "Play Again";
+		for(var i=0; i < squares.length; i++){
+			squares[i].style.backgroundColor = answer;
+			squares[i].classList.remove("faded");
+		}
+	} else {
+		this.classList.add("faded");
+		result.innerHTML = "Try Again!";
+	}
 }
 
 //Event Listeners
