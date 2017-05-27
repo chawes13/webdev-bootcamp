@@ -10,6 +10,7 @@ var rgbTitle = document.querySelector("#rgbTitle");
 var reset = document.querySelector("#reset>a");
 var hardSquares = document.querySelector("#hard");
 var result = document.querySelector("#result");
+var jumbotron = document.querySelector("#display");
 
 //Initialise gameboard
 createGameboard();
@@ -24,7 +25,7 @@ function createGameboard(){
 
 function generateColours(){
 	while(colours.length < squares.length){
-		var rgbString = "rgb(" + randomNum(255) + ", " + randomNum(255) + ", " + randomNum(255) + ")";
+		var rgbString = "rgb(" + randomNum(256) + ", " + randomNum(256) + ", " + randomNum(256) + ")";
 		if(colours.indexOf(rgbString) === -1){
 			colours.push(rgbString);
 		}
@@ -50,22 +51,23 @@ function randomNum(max){
 
 function playAgain(){
 	colours = [];
-	reset.innerHTML = "New Colours";
-	result.innerHTML = "";
+	reset.textContent = "New Colours";
+	result.textContent = "";
+	jumbotron.style.backgroundColor = "";
 	createGameboard();
 }
 
 function squareAction(){
 	if(this.style.backgroundColor === answer){
-		result.innerHTML = "You won!";
-		reset.innerHTML = "Play Again";
+		jumbotron.style.backgroundColor = answer;
 		for(var i=0; i < squares.length; i++){
 			squares[i].style.backgroundColor = answer;
-			squares[i].classList.remove("faded");
 		}
+		result.textContent = "You won!";
+		reset.textContent = "Play Again";
 	} else {
-		this.classList.add("faded");
-		result.innerHTML = "Try Again!";
+		this.style.backgroundColor = "#232323";
+		result.textContent = "Try Again!";
 	}
 }
 

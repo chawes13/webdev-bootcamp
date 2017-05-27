@@ -11,6 +11,7 @@ body {
 	float: left;
 	margin: 1.66%;
 	border-radius: 10%;
+	transition: background 0.5s;
 }
 
 #squares {
@@ -19,7 +20,6 @@ body {
 }
 
 .jumbotron h1 {
-	/*color: white;*/
 	text-align: center;
 	font-size: 25px;
 }
@@ -37,7 +37,6 @@ body {
 	margin-bottom: 0px;
 	background-color: #4b78c1;
 	color: white;
-	/*text-transform: uppercase;*/
 }
 
 .navbar-default {
@@ -65,6 +64,11 @@ body {
 	color: #4b78c1;
 	font-weight: 700;
 	z-index: 1;
+	width: auto;
+}
+
+.navbar-toggle .collapsed {
+	z-index: 1;
 }
 
 #rgbTitle {
@@ -76,12 +80,3 @@ body {
         max-width: 700px;
     }
 }
-
-.faded {
-	opacity: 0;
-	transition: all 0.5s ease;
-}
-
-/*.active {
-	color: pink;
-}*/
