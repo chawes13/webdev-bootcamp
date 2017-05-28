@@ -5,12 +5,12 @@ var idToSelect = "";
 var squares = "";
 
 var modeToggle = document.querySelector("#mode");
-var modeCells = document.querySelectorAll("#mode li");
+var modeCells = document.querySelectorAll("#mode button");
 var rgbTitle = document.querySelector("#rgbTitle");
-var reset = document.querySelector("#reset>a");
+var reset = document.querySelector("#reset");
 var hardSquares = document.querySelector("#hard");
 var result = document.querySelector("#result");
-var jumbotron = document.querySelector("#display");
+var boardDisplay = document.querySelector("h1");
 
 //Initialise gameboard
 createGameboard();
@@ -53,13 +53,13 @@ function playAgain(){
 	colours = [];
 	reset.textContent = "New Colours";
 	result.textContent = "";
-	jumbotron.style.backgroundColor = "";
+	boardDisplay.style.backgroundColor = "";
 	createGameboard();
 }
 
 function squareAction(){
 	if(this.style.backgroundColor === answer){
-		jumbotron.style.backgroundColor = answer;
+		boardDisplay.style.backgroundColor = answer;
 		for(var i=0; i < squares.length; i++){
 			squares[i].style.backgroundColor = answer;
 		}
