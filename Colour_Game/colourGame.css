@@ -7,12 +7,14 @@ body {
 
 .square {
 	width: 30%;
-	background: purple;
+	background: #232323;
 	padding-bottom: 30%;
 	float: left;
 	margin: 1.66%;
 	border-radius: 10%;
 	transition: background 0.3s;
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
 }
 
 #squares {
@@ -37,8 +39,14 @@ button {
 	text-transform: uppercase;
 	border: none;
 	padding: 10px 5px;
-	margin: 0 5px;
+	margin: 0 1px;
 	outline: none;
+	font-family: 'Ubuntu';
+	font-size: inherit;
+	letter-spacing: 1px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.6s;
+	-moz-transition: all 0.6s;
 }
 
 button.active {
@@ -48,7 +56,8 @@ button.active {
 }
 
 button:hover {
-	color: black;
+	color: white;
+	background: #4b78c1;
 }
 
 #result {
@@ -66,4 +75,8 @@ button:hover {
 
 #rgbTitle {
 	font-size: 2em;
+}
+
+.hidden {
+	display: none;
 }
